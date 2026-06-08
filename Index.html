@@ -17,6 +17,49 @@ body{
     background:#f8fafc;
     color:#333;
     line-height:1.6;
+    padding-top: 70px; /* Space for the fixed navbar */
+}
+
+/* New Navigation Bar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 50px; /* Adjust size as needed */
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1e40af;
 }
 
 header{
@@ -24,6 +67,16 @@ header{
     color:white;
     padding:100px 20px;
     text-align:center;
+}
+
+/* Header Logo Styling */
+.header-logo {
+    max-width: 180px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background: white; /* Keeps the logo background clean */
+    padding: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 header h1{
@@ -172,13 +225,30 @@ footer{
     header p{
         font-size:1rem;
     }
+    
+    .nav-links {
+        display: none; /* Simplifies mobile view, can be upgraded to a burger menu later */
+    }
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <div class="nav-container">
+        <a href="#"><img src="1000386605.jpg" alt="Alovate Technologies Logo" class="nav-logo"></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
 <header>
+    <img src="1000386605.jpg" alt="Alovate Technologies" class="header-logo">
     <h1>ALOVATE TECHNOLOGIES</h1>
     <p>
         Innovating Business Through Web, Cloud & AI Solutions.
@@ -189,7 +259,7 @@ footer{
     <a href="#contact" class="btn">Get Free Consultation</a>
 </header>
 
-<section>
+<section id="about">
     <h2 class="section-title">About Us</h2>
 
     <div class="about">
@@ -226,7 +296,7 @@ footer{
     </div>
 </section>
 
-<section>
+<section id="services">
     <h2 class="section-title">Our Services</h2>
 
     <div class="grid">
@@ -323,7 +393,7 @@ footer{
     </div>
 </section>
 
-<section>
+<section id="process">
     <h2 class="section-title">Our Process</h2>
 
     <div class="process">
