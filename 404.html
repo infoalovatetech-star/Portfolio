@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Get current URL details
+      let locationObj = window.location;
+      let search = locationObj.search;
+
+      // If Facebook client ID exists, clean it or forward safely
+      if (search.includes('fbclid=')) {
+        // Redirect back to the main site root or intended path without breaking
+        window.location.replace(locationObj.protocol + '//' + locationObj.hostname + locationObj.pathname);
+      } else {
+        // Standard fallback to home if path is completely wrong
+        window.location.replace('/');
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
